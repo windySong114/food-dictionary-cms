@@ -1,0 +1,12 @@
+// 重置element-plus样式
+// 处理选中后出现黑色边框和颜色不还原的问题
+.el-button,
+.el-button:focus:not(.el-button:hover) {
+    outline: none;
+    border-color: var(--el-button-border-color);
+    background-color: var(--el-button-bg-color);
+}
+// 去掉下拉框hover时的黑色边框
+.el-tooltip__trigger:focus-visible{
+    outline: unset;
+}

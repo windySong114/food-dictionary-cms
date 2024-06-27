@@ -1,0 +1,86 @@
+/**
+ * by qingzhong.zeng
+ * 注意：这个文件会注入到每一份<style>中，慎重添加，包括其import的模块
+**/
+// base color
+$blue: #324157;
+$light-blue: #48a3fd;
+$red: #F50013;
+$pink: #E65D6E;
+$green: #30b05b;
+$tiffany: #4AB7BD;
+$yellow: #FEC171;
+$panGreen: #30B08F;
+
+// $yl-main-color: #ffb20b;
+$main-color: #0F75FF;
+$main-gray-bg: #FAFAFA;
+$main-gray: #eeeeee;
+$main-dark-gray:#c6c6c6;
+$full-bg-color:#F5F6FE;
+
+$navBarHeight: 60px; //顶部高度
+$footBarHeight:0px; //底部高度
+$layoutCenterWidth:1200px; //版心布局时的宽度
+$tagsViewHeight:36px; //tagsview组件高度
+$sideBarWidth:254px; //左侧导航宽度
+
+$sideBarMarginTop:0px;
+$sideBarMarginLeft:0px;
+$sideBarMarginRight:0px;
+$sideBarWidthMargin:$sideBarMarginLeft + $sideBarMarginRight; //左侧导航与右侧内容间隙
+$sideBarLogoHeight:60px;
+
+$sideBarHeight:calc(100vh / var(--yl-zoom) - $sideBarMarginTop * 2); //左侧导航容器高度
+$sideBarInnerHeight:calc(100vh / var(--yl-zoom) - $sideBarMarginTop * 2 - $sideBarLogoHeight); //左侧导航容器高度
+
+$mainScrollMarginTop:0px; //右侧内容区距离顶部tagview距离
+
+// 主体区域距离左侧距离
+$mainMarginLeft:16px;
+$mainMarginTop: 16px;
+$mainMarginRight:16px;
+$mainMarginBottom: 16px;
+
+// 内容区域高度
+$contentHeight:calc($sideBarHeight - $navBarHeight - $tagsViewHeight - $mainScrollMarginTop - $mainMarginTop - $mainMarginBottom);
+
+// UI:z-index规划
+// 左侧导航 1000
+// 顶部菜单 1100
+$fixedHeadZIndex: 1100;
+// 弹窗 2000
+$dialogZIndex: 1500;
+// loading 3000
+$loadingZIndex: 3000;
+$maxZIndex:99999;
+
+// sidebar yl
+$menuBg:transparent;
+// $menuActiveBg:#1C6DA8;
+$menuActiveBg:#FFB718;
+
+// $layoutLeftBg:linear-gradient(132deg, #1D86D3, #489AD6);
+$layoutLeftBg:white;
+
+$menuFontColor:black;
+$menuFontActiveColor:var(--el-color-primary);;
+$menuRadio:8px;
+$menuMargin:0 10px;
+$menuBg:white;
+$menuActiveBg:white;
+
+$itemFontColor:black;
+$itemFontActiveColor:var(--el-color-primary);
+$itemRadio:8px;
+$itemMargin:0 10px;
+$itemBg:white;
+$itemActiveBg:white;
+
+:export {
+    mainColor:$main-color;
+    mainGrayBg:$main-gray-bg;
+    dialogZIndex: $dialogZIndex;
+    sideBarWidth:$sideBarWidth;
+    menuBg:$menuBg;
+}

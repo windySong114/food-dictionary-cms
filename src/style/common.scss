@@ -1,0 +1,43 @@
+// line-x （1-10） 多行省略的公共样式
+.line-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+}
+@for $i from 2 through 10 {
+    .line-#{$i} {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $i;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+    }
+}
+// 常见按钮
+.main-btn {
+    min-width: 100px;
+    height: 40px;
+    background: $main-color;
+    border-radius: 5px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    font-size: 14px;
+    border: solid 1px $main-color;
+    padding: 0 10px;
+    cursor: pointer;
+
+    &.error {
+        background-color: red;
+        border-color: red;
+    }
+
+    &.normal {
+        background-color: #fff;
+        color: $main-color;
+        border-color: $main-color;
+    }
+}
